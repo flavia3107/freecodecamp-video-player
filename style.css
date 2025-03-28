@@ -27,3 +27,73 @@
     display: none;
   }
 }
+
+::-webkit-scrollbar {
+  height: 9px;
+  width: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5e5e5e;
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  width: 9px;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo > img {
+  height: 35px;
+}
+
+.logo-txt {
+  padding-left: 7px;
+  display: flex;
+  flex-direction: column;
+  color: #2e2e2e;
+  align-items: flex-start;
+}
+
+.logo-img {
+  width: 2rem;
+  margin-right: 3px;
+}
+
+.logo-txt h1,
+.logo-txt span {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  letter-spacing: 4px;
+  color: #2e2e2e;
+}
+
+.logo-txt h1 {
+  font-weight: bolder;
+  font-size: 1rem;
+}
+
+.logo-txt span {
+  font-weight: lighter;
+  font-size: 0.85rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}

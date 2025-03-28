@@ -9,6 +9,11 @@ const progressIndicator = document.querySelector("#progress-indicator");
 const progessBar = document.querySelector("#progress-bar");
 const fullscreen = document.getElementById("fullscreen");
 const playButton = document.getElementById("playButton");
+const audio = document.getElementById('myAudio');
+
+video.onplay = () => audio.play();
+video.onpause = () => audio.pause();
+video.onseeking = () => (audio.currentTime = video.currentTime);
 
 function playNpauseFn() {
   video.paused ? video.play() : video.pause();
