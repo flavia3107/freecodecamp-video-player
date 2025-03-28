@@ -5,13 +5,65 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link rel="stylesheet" href="./style.css" />
+  <script type="module" src="/main.js" defer></script>
+
   <title>HTML5 Custom Video Player</title>
 </head>
 
-<body>
-  <h1 class="text-3xl font-bold underline text-red-800">Hello world!</h1>
-  <script type="module" src="/main.js"></script>
+<body class="bg-indigo-950 p-10">
+  <div id="container" class="w-4/5 h-4/5 mx-auto rounded-lg overflow-hidden relative group">
+    <!-- VIDEO -->
+    <figure>
+      <button id="playButton"
+        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white px-4 py-2 rounded-full">
+        ▶ Play
+      </button>
+      <video class="w-full" poster="ocean.jpg">
+        <source src="/oceans.mp4" />
+      </video>
+    </figure>
+
+    <!-- CONTROLS -->
+    <div id="controls"
+      class="opacity-0 p-5 absolute bottom-0 left-0 w-full transition-opacity duration-300 ease-linear group-hover:opacity-100">
+
+      <!-- PROGRESS BAR -->
+      <div id="progress-bar" class="h-1 w-full bg-white cursor-pointer mb-4">
+        <div id="progress-indicator" class="h-full w-0 bg-indigo-800 transition-all duration-500 ease-in-out"></div>
+      </div>
+      <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between">
+          <!-- REWIND BUTTON -->
+          <button id="rewind" class="transition-all duration-100 ease-linear hover:scale-125">
+            <i class="material-icons text-white text-3xl w-12">replay_10 </i>
+          </button>
+
+          <!-- PLAY BUTTON -->
+          <button id="play-pause" class="transition-all duration-100 ease-linear hover:scale-125">
+            <i class="material-icons text-white text-5xl inline-block w-12">play_arrow</i>
+          </button>
+
+          <!-- FAST FORWARD BUTTON -->
+          <button id="fast-forward" class="transition-all duration-100 ease-linear hover:scale-125">
+            <i class="material-icons text-white text-3xl w-12">forward_10 </i>
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <!-- VOLUME BUTTON -->
+          <button id="volume" class="transition-all duration-100 ease-linear hover:scale-125">
+            <i class="material-icons text-white text-3xl">volume_up</i>
+          </button>
+          <!-- FULLSCREEN BUTTON -->
+          <button id="fullscreen" class="transition-all duration-100 ease-linear hover:scale-125 ml-4">
+            <i class="material-icons text-white text-3xl">fullscreen</i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
