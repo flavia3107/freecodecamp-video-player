@@ -34,6 +34,11 @@ function rewindNforwardFn(type) {
 
 function muteNunmuteFn() {
   video.muted = video.muted ? false : true;
+  if (!video.muted) {
+    audio.play();
+  } else {
+    audio.pause()
+  }
 }
 
 function updateVolumeIcon() {
